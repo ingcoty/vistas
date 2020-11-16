@@ -4,11 +4,29 @@
     <string name="opt1">Áreas</string>
     <string name="opt2">Voúmenes</string>
     <string name="opt3">Opreaciones Realizadas</string>
+    <string name="area1">Cuadrado</string>
+    <string name="area2">Rectángulo</string>
+    <string name="area3">Triángulo</string>
+    <string name="area4">Círculo</string>
+    <string name="titulo_areas">AREAS</string>
+    <string name="lblcuadrado">Valor del Lado: </string>
+    <string name="txtbtncalcular">Calcular</string>
+    <string name="txtbtnborrar">Borrar</string>
+    <string name="lblbase">Base</string>
+    <string name="lblaltura">Altura</string>
+    <string name="lblradio">Radio</string>
 
     <string-array name="opciones">
         <item>@string/opt1</item>
         <item>@string/opt2</item>
         <item>@string/opt3</item>
+    </string-array>
+
+    <string-array name="opt_areas">
+        <item>@string/area1</item>
+        <item>@string/area2</item>
+        <item>@string/area3</item>
+        <item>@string/area4</item>
     </string-array>
 
 </resources>
