@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Vistas</string>
+    <string name="titulo_opciones">OPCIONES</string>
+    <string name="opt1">Áreas</string>
+    <string name="opt2">Voúmenes</string>
+    <string name="opt3">Opreaciones Realizadas</string>
+
+    <string-array name="opciones">
+        <item>@string/opt1</item>
+        <item>@string/opt2</item>
+        <item>@string/opt3</item>
+    </string-array>
+
 </resources>
