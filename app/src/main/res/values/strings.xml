@@ -15,6 +15,11 @@
     <string name="lblbase">Base</string>
     <string name="lblaltura">Altura</string>
     <string name="lblradio">Radio</string>
+    <string name="titulo_resultado" />
+    <string name="lblResultadoArea">Area:</string>
+    <string name="btnOk">Ok</string>
+    <string name="lblResultadoVolume">Volumen</string>
+    <string name="errcuadrado">Digite el dato solicitado</string>
 
     <string-array name="opciones">
         <item>@string/opt1</item>
