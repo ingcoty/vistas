@@ -20,6 +20,12 @@
     <string name="btnOk">Ok</string>
     <string name="lblResultadoVolume">Volumen</string>
     <string name="errcuadrado">Digite el dato solicitado</string>
+    <string name="titulo_volumenes">VOLÚMENES</string>
+    <string name="vol1">Esfera</string>
+    <string name="vol2">Cilindro</string>
+    <string name="vol3">Cono</string>
+    <string name="vol4">Cubo</string>
+    <string name="lblprofundidad">Profundidad</string>
 
     <string-array name="opciones">
         <item>@string/opt1</item>
@@ -32,6 +38,13 @@
         <item>@string/area2</item>
         <item>@string/area3</item>
         <item>@string/area4</item>
+    </string-array>
+
+    <string-array name="opt_volumes">
+        <item>@string/vol1</item>
+        <item>@string/vol2</item>
+        <item>@string/vol3</item>
+        <item>@string/vol4</item>
     </string-array>
 
 </resources>

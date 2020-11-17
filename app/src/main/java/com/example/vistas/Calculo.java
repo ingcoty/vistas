@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -43,15 +44,30 @@ public class Calculo extends AppCompatActivity {
 
         intent = new Intent(Calculo.this, Resultado.class);
         Bundle param = new Bundle();
-        param.putInt("show", 0);
 
         EditText txtValue = new EditText(this);
+        txtValue.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         EditText txtBase = new EditText(this);
+        txtBase.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         EditText txtAltura = new EditText(this);
+        txtAltura.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         EditText txtBaseT = new EditText(this);
+        txtBaseT.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         EditText txtAlturaT = new EditText(this);
+        txtAlturaT.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
         EditText txtRadio = new EditText(this);
+        txtRadio.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+        EditText txtProfundidad = new EditText(this);
+        txtProfundidad.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
+        TextView lblradio = new TextView(this);
+        TextView lblaltura = new TextView(this);
+        TextView lblprofundidad = new TextView(this);
+        TextView lblbase = new TextView(this);
+        TextView lblbaseT = new TextView(this);
+
+        if(value <= 3) param.putInt("show", 0);
+        else param.putInt("show", 1);
         switch (value){
             case 0: //cuadrado
                 titulo.setText(getResources().getString(R.string.area1).toUpperCase());
@@ -86,11 +102,10 @@ public class Calculo extends AppCompatActivity {
 
             case 1:
                 titulo.setText(getResources().getString(R.string.area2).toUpperCase());
-                TextView lblbase = new TextView(this);
                 lblbase.setGravity(Gravity.CENTER_VERTICAL);
                 lblbase.setText(getResources().getString(R.string.lblbase));
 
-                TextView lblaltura = new TextView(this);
+                //TextView lblaltura = new TextView(this);
                 lblaltura.setGravity(Gravity.CENTER_VERTICAL);
                 lblaltura.setText(getResources().getString(R.string.lblaltura));
 
@@ -129,7 +144,7 @@ public class Calculo extends AppCompatActivity {
 
             case 2:
                 titulo.setText(getResources().getString(R.string.area3).toUpperCase());
-                TextView lblbaseT = new TextView(this);
+
                 lblbaseT.setGravity(Gravity.CENTER_VERTICAL);
                 lblbaseT.setText(getResources().getString(R.string.lblbase));
 
@@ -173,7 +188,7 @@ public class Calculo extends AppCompatActivity {
 
             case 3:
                 titulo.setText(getResources().getString(R.string.area4).toUpperCase());
-                TextView lblradio = new TextView(this);
+
                 lblradio.setGravity(Gravity.CENTER_VERTICAL);
                 lblradio.setText(getResources().getString(R.string.lblradio));
 
@@ -201,6 +216,170 @@ public class Calculo extends AppCompatActivity {
                 });
 
                 break;
+
+            case 4:
+                titulo.setText(getResources().getString(R.string.vol1).toUpperCase());
+                lblradio.setGravity(Gravity.CENTER_VERTICAL);
+                lblradio.setText(getResources().getString(R.string.lblradio));
+
+                txtRadio.setGravity(Gravity.CENTER_VERTICAL);
+
+                content.addView(lblradio);
+                content.addView(txtRadio);
+
+                btnCalcular.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(txtRadio.getText().toString().isEmpty()){
+                            txtRadio.setError(getResources().getString(R.string.lblradio));
+                            txtRadio.requestFocus();
+                        }
+                        else {
+                            double radio = Double.parseDouble(txtRadio.getText().toString());
+                            double volume = (4/3) * Math.PI * (radio * radio* radio);
+                            param.putDouble("area", volume);
+                            param.putString("title", getResources().getString(R.string.vol1).toUpperCase());
+                            intent.putExtras(param);
+                            startActivity(intent);
+                        }
+                    }
+                });
+
+                break;
+
+            case 5:
+                titulo.setText(getResources().getString(R.string.vol2).toUpperCase());
+                lblradio.setGravity(Gravity.CENTER_VERTICAL);
+                lblradio.setText(getResources().getString(R.string.lblradio));
+
+                lblaltura.setGravity(Gravity.CENTER_VERTICAL);
+                lblaltura.setText(getResources().getString(R.string.lblaltura));
+
+                txtRadio.setGravity(Gravity.CENTER_VERTICAL);
+                txtAltura.setGravity(Gravity.CENTER_VERTICAL);
+
+                content.addView(lblradio);
+                content.addView(txtRadio);
+                content.addView(lblaltura);
+                content.addView(txtAltura);
+
+                btnCalcular.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(txtRadio.getText().toString().isEmpty()){
+                            txtRadio.setError(getResources().getString(R.string.errcuadrado));
+                            txtRadio.requestFocus();
+                        }
+                        else if(txtAltura.getText().toString().isEmpty()){
+                            txtAltura.setError(getResources().getString(R.string.errcuadrado));
+                            txtAltura.requestFocus();
+                        }
+                        else {
+                            double radio = Double.parseDouble(txtRadio.getText().toString());
+                            double altura = Double.parseDouble((txtAltura.getText().toString()));
+                            double volume = Math.PI * radio * radio * altura;
+                            param.putDouble("area", volume);
+                            param.putString("title", getResources().getString(R.string.vol2).toUpperCase());
+                            intent.putExtras(param);
+                            startActivity(intent);
+                        }
+                    }
+                });
+
+                break;
+
+            case 6:
+                titulo.setText(getResources().getString(R.string.vol3).toUpperCase());
+                lblradio.setGravity(Gravity.CENTER_VERTICAL);
+                lblradio.setText(getResources().getString(R.string.lblradio));
+
+                lblaltura.setGravity(Gravity.CENTER_VERTICAL);
+                lblaltura.setText(getResources().getString(R.string.lblaltura));
+
+                txtRadio.setGravity(Gravity.CENTER_VERTICAL);
+                txtAltura.setGravity(Gravity.CENTER_VERTICAL);
+
+                content.addView(lblradio);
+                content.addView(txtRadio);
+                content.addView(lblaltura);
+                content.addView(txtAltura);
+
+                btnCalcular.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(txtRadio.getText().toString().isEmpty()){
+                            txtRadio.setError(getResources().getString(R.string.errcuadrado));
+                            txtRadio.requestFocus();
+                        }
+                        else if(txtAltura.getText().toString().isEmpty()){
+                            txtAltura.setError(getResources().getString(R.string.errcuadrado));
+                            txtAltura.requestFocus();
+                        }
+                        else {
+                            double radio = Double.parseDouble(txtRadio.getText().toString());
+                            double altura = Double.parseDouble((txtAltura.getText().toString()));
+                            double volume = Math.PI * radio * radio * altura/3;
+                            param.putDouble("area", volume);
+                            param.putString("title", getResources().getString(R.string.vol2).toUpperCase());
+                            intent.putExtras(param);
+                            startActivity(intent);
+                        }
+                    }
+                });
+
+                break;
+
+            case 7:
+                titulo.setText(getResources().getString(R.string.vol4).toUpperCase());
+                lblbase.setGravity(Gravity.CENTER_VERTICAL);
+                lblbase.setText(getResources().getString(R.string.lblbase));
+
+                lblaltura.setGravity(Gravity.CENTER_VERTICAL);
+                lblaltura.setText(getResources().getString(R.string.lblaltura));
+
+                lblprofundidad.setGravity(Gravity.CENTER_VERTICAL);
+                lblprofundidad.setText(getResources().getString(R.string.lblprofundidad));
+
+                txtRadio.setGravity(Gravity.CENTER_VERTICAL);
+                txtAltura.setGravity(Gravity.CENTER_VERTICAL);
+                txtProfundidad.setGravity(Gravity.CENTER_VERTICAL);
+
+                content.addView(lblbase);
+                content.addView(txtBase);
+                content.addView(lblaltura);
+                content.addView(txtAltura);
+                content.addView(lblprofundidad);
+                content.addView(txtProfundidad);
+
+                btnCalcular.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(txtBase.getText().toString().isEmpty()){
+                            txtBase.setError(getResources().getString(R.string.errcuadrado));
+                            txtBase.requestFocus();
+                        }
+                        else if(txtAltura.getText().toString().isEmpty()){
+                            txtAltura.setError(getResources().getString(R.string.errcuadrado));
+                            txtAltura.requestFocus();
+                        }
+                        else if(txtProfundidad.getText().toString().isEmpty()){
+                            txtProfundidad.setError(getResources().getString(R.string.errcuadrado));
+                            txtProfundidad.requestFocus();
+                        }
+                        else {
+                            double radio = Double.parseDouble(txtBase.getText().toString());
+                            double altura = Double.parseDouble((txtAltura.getText().toString()));
+                            double profundidad = Double.parseDouble((txtProfundidad.getText().toString()));
+                            double volume = radio*altura*profundidad;
+                            param.putDouble("area", volume);
+                            param.putString("title", getResources().getString(R.string.vol4).toUpperCase());
+                            intent.putExtras(param);
+                            startActivity(intent);
+                        }
+                    }
+                });
+
+                break;
         }
 
         content.addView(lytButtons);
@@ -214,6 +393,7 @@ public class Calculo extends AppCompatActivity {
                 txtBaseT.setText("");
                 txtAlturaT.setText("");
                 txtRadio.setText("");
+                txtProfundidad.setText("");
             }
         });
 
