@@ -9,7 +9,7 @@
     <string name="area3">Triángulo</string>
     <string name="area4">Círculo</string>
     <string name="titulo_areas">AREAS</string>
-    <string name="lblcuadrado">Valor del Lado: </string>
+    <string name="lblcuadrado">Lado: </string>
     <string name="txtbtncalcular">Calcular</string>
     <string name="txtbtnborrar">Borrar</string>
     <string name="lblbase">Base</string>
@@ -26,6 +26,14 @@
     <string name="vol3">Cono</string>
     <string name="vol4">Cubo</string>
     <string name="lblprofundidad">Profundidad</string>
+    <string name="operacion">"Area de "</string>
+    <string name="lblTituloHistorial">Realizadas</string>
+    <string name="flNo">No</string>
+    <string name="flOperacion">Operación</string>
+    <string name="flDatos">Datos</string>
+    <string name="flResultado">Resultado</string>
+    <string name="stretch">*</string>
+    <string name="operacionVolume">"Volumen de "</string>
 
     <string-array name="opciones">
         <item>@string/opt1</item>
