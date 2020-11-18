@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vistas</string>
+    <string name="titulo_opciones">OPTIONS</string>
+    <string name="opt1">Areas</string>
+    <string name="opt2">Volumes</string>
+    <string name="opt3">Operations performed</string>
+    <string name="area1">Square</string>
+    <string name="area2">Rectangle</string>
+    <string name="area3">Triangle</string>
+    <string name="area4">Circle</string>
+    <string name="titulo_areas">AREAS</string>
+    <string name="lblcuadrado">Side:</string>
+    <string name="txtbtncalcular">Calculate</string>
+    <string name="txtbtnborrar">Clear</string>
+    <string name="lblbase">Base</string>
+    <string name="lblaltura">Height</string>
+    <string name="lblradio">Radio</string>
+    <string name="lblResultadoArea">Area:</string>
+    <string name="btnOk">Ok</string>
+    <string name="lblResultadoVolume">Volume</string>
+    <string name="errcuadrado">" 25/5000 Enter the requested information"</string>
+    <string name="titulo_volumenes">VOLUMES</string>
+    <string name="vol1">Sphere</string>
+    <string name="vol2">Cylinder</string>
+    <string name="vol3">Cone</string>
+    <string name="vol4">Cube</string>
+    <string name="lblprofundidad">Depth</string>
+    <string name="operacion">Area of</string>
+    <string name="lblTituloHistorial">Performed</string>
+    <string name="flNo">No</string>
+    <string name="flOperacion">Actions</string>
+    <string name="flDatos">Data</string>
+    <string name="flResultado">Results</string>
+    <string name="stretch">*</string>
+    <string name="operacionVolume">Volume of</string>
+    <string name="areacuadrado">Square Area</string>
+    <string name="arearectangulo">Rectangle Area</string>
+    <string name="areatriangulo">Triangle Area</string>
+    <string name="areacirculo">Circle Area</string>
+    <string name="volumenesfera">Sphere Volume</string>
+    <string name="volumencilindro">Cylinder Volume</string>
+    <string name="volumencono">Cone Volume</string>
+    <string name="vulumencubo">Cube Volume</string>
+</resources>

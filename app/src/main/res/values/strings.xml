@@ -2,7 +2,7 @@
     <string name="app_name">Vistas</string>
     <string name="titulo_opciones">OPCIONES</string>
     <string name="opt1">Áreas</string>
-    <string name="opt2">Voúmenes</string>
+    <string name="opt2">Volúmenes</string>
     <string name="opt3">Opreaciones Realizadas</string>
     <string name="area1">Cuadrado</string>
     <string name="area2">Rectángulo</string>
@@ -34,6 +34,14 @@
     <string name="flResultado">Resultado</string>
     <string name="stretch">*</string>
     <string name="operacionVolume">"Volumen de "</string>
+    <string name="areacuadrado">Area de Cuadrado</string>
+    <string name="arearectangulo">Area de Rectángulo</string>
+    <string name="areatriangulo">Area de Triángulo</string>
+    <string name="areacirculo">Area de Circulo</string>
+    <string name="volumenesfera">Volumen de Esfera</string>
+    <string name="volumencilindro">Volumen de Cilindro</string>
+    <string name="volumencono">Volumen de Cono</string>
+    <string name="vulumencubo">Volumen de Cubo</string>
 
     <string-array name="opciones">
         <item>@string/opt1</item>

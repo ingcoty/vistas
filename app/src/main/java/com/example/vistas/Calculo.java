@@ -93,7 +93,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", area);
                             param.putString("title", getResources().getString(R.string.area1).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacion) + getResources().getString(R.string.area1);
+                            String operacion = getResources().getString(R.string.areacuadrado);
                             String datos = getResources().getString(R.string.lblcuadrado) + " " + txtValue.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", area));
                             registro.guardar();
@@ -139,7 +139,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", area);
                             param.putString("title", getResources().getString(R.string.area2).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacion) + getResources().getString(R.string.area2);
+                            String operacion = getResources().getString(R.string.arearectangulo);
                             String datos = getResources().getString(R.string.lblbase) + ": " + txtBase.getText() + "\n";
                             datos += getResources().getString(R.string.lblaltura) + ": " + txtAltura.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", area));
@@ -188,7 +188,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", area);
                             param.putString("title", getResources().getString(R.string.area3).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacion) + getResources().getString(R.string.area3);
+                            String operacion = getResources().getString(R.string.areatriangulo);
                             String datos = getResources().getString(R.string.lblbase) + ": " + txtBaseT.getText() + "\n";
                             datos += getResources().getString(R.string.lblaltura) + ": " + txtAlturaT.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", area));
@@ -224,7 +224,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", area);
                             param.putString("title", getResources().getString(R.string.area4).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacion) + getResources().getString(R.string.area4);
+                            String operacion = getResources().getString(R.string.areacirculo);
                             String datos = getResources().getString(R.string.lblradio) + ": " + txtRadio.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", area));
                             registro.guardar();
@@ -258,7 +258,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", volume);
                             param.putString("title", getResources().getString(R.string.vol1).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacionVolume) + getResources().getString(R.string.vol1);
+                            String operacion = getResources().getString(R.string.volumenesfera);
                             String datos = getResources().getString(R.string.lblradio) + ": " + txtRadio.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", volume));
                             registro.guardar();
@@ -303,7 +303,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", volume);
                             param.putString("title", getResources().getString(R.string.vol2).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacionVolume) + getResources().getString(R.string.vol2);
+                            String operacion = getResources().getString(R.string.volumencilindro);
                             String datos = getResources().getString(R.string.lblradio) + ": " + txtRadio.getText() + "\n";
                             datos += getResources().getString(R.string.lblaltura) + ": " + txtAltura.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", volume));
@@ -349,7 +349,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", volume);
                             param.putString("title", getResources().getString(R.string.vol3).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacionVolume) + getResources().getString(R.string.vol3);
+                            String operacion = getResources().getString(R.string.volumencono);
                             String datos = getResources().getString(R.string.lblradio) + ": " + txtRadio.getText() + "\n";
                             datos += getResources().getString(R.string.lblaltura) + ": " + txtAltura.getText();
                             Registro registro = new Registro(operacion, datos, String.format("%.2f", volume));
@@ -406,7 +406,7 @@ public class Calculo extends AppCompatActivity {
                             param.putDouble("area", volume);
                             param.putString("title", getResources().getString(R.string.vol4).toUpperCase());
                             intent.putExtras(param);
-                            String operacion = getResources().getString(R.string.operacion) + getResources().getString(R.string.vol4);
+                            String operacion = getResources().getString(R.string.vulumencubo);
                             String datos = getResources().getString(R.string.lblbase) + ": " + txtBase.getText() + "\n";
                             datos += getResources().getString(R.string.lblaltura) + ": " + txtAltura.getText() + "\n";
                             datos += getResources().getString(R.string.lblprofundidad) + ": " + txtProfundidad.getText();
